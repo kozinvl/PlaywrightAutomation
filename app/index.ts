@@ -1,0 +1,1 @@
+import { FormAuthenticationPage } from "./pages/login.page"
