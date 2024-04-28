@@ -1,16 +1,16 @@
 import type { Page } from "@playwright/test";
 
 export abstract class Component {
+  
   abstract expectLoaded(message?: string): Promise<void>;
+  
   constructor(protected page: Page) {}
 
   async isLoaded(): Promise<boolean> {
     try {
       await this.expectLoaded();
-      return true;
-    } catch {
-      return false;
-    }
+      return true
+    } catch { return false }
   }
 }
 
@@ -19,6 +19,7 @@ export abstract class BasePage extends Component {
 
   async open(path?: string) {
     await this.page.goto(path ?? this.pagePath);
+
     await this.expectLoaded();
   }
 }
