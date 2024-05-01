@@ -24,8 +24,6 @@ export class FormAuthenticationPage extends BasePage {
     email: string;
     password: string;
   }) {
-    await this.expectLoaded();
-
     await this.passwordInput.fill(credentials.password);
     await this.emailInput.fill(credentials.email);
 
