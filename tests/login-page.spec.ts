@@ -4,11 +4,6 @@ import { testConfig } from "../testConfig";
 
 test.describe('Authentication Page', () => {
   let formAuthPage: FormAuthenticationPage;
-  
-  let credentials = {
-    email: testConfig.email,
-    password: testConfig.password,
-  };
 
   test.beforeEach(async ({ page }) => {
     formAuthPage = new FormAuthenticationPage(page);
@@ -24,6 +19,9 @@ test.describe('Authentication Page', () => {
   });
 
   test('there is successful authentication', async () => {
-    await formAuthPage.performAuthentication(credentials);
+    await formAuthPage.performAuthentication({
+      email: testConfig.email,
+      password: testConfig.password,
+    });
   });
 });
