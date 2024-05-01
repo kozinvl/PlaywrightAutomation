@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { FormAuthenticationPage } from "../app/pages/login.page";
 
-test.describe("Authentication Page", () => {
+test.describe('Authentication Page', () => {
   let formAuthPage: FormAuthenticationPage;
   let credentials = {
     email: 'admin@phptravels.com',
