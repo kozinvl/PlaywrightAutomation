@@ -1,4 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
+import { testConfig } from "./testConfig";
 
 export default defineConfig({
   timeout: 30 * 1000,
@@ -11,7 +12,7 @@ export default defineConfig({
   reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: "https://phptravels.net/",
+    baseURL: testConfig.baseURL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",

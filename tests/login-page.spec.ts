@@ -1,11 +1,13 @@
 import { test, expect } from "@playwright/test";
 import { FormAuthenticationPage } from "../app/pages/login.page";
+import { testConfig } from "../testConfig";
 
 test.describe('Authentication Page', () => {
   let formAuthPage: FormAuthenticationPage;
+  
   let credentials = {
-    email: 'admin@phptravels.com',
-    password: 'demoadmin',
+    email: testConfig.email,
+    password: testConfig.password,
   };
 
   test.beforeEach(async ({ page }) => {
