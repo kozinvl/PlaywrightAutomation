@@ -1,22 +1,14 @@
-import { test, expect } from "@playwright/test";
-import { DashboardPage } from "../app/pages/dashboard.page";
+import { expect } from "@playwright/test";
+import { testFixture } from "../fixtures/";
 
-test.describe('Dashboard Page', () => {
-  test('search section loaded', async ({ page }) => {
-    const dashboardPage = new DashboardPage(page);
-
-    await dashboardPage.open();
-    await dashboardPage.isLoaded();
-
-    await dashboardPage.expectSpinnerLoaded();
+testFixture.describe("Dashboard Page", () => {
+  testFixture("search trip section loaded", async ({ dashboard }) => {
+    await dashboard.expectSpinnerLoaded();
   });
 
-  test('navigation bar loaded', async ({ page }) => {
-    const dashboardPage = new DashboardPage(page);
-    await dashboardPage.open();
-
-    for (const [navBar, MenuItems] of Object.entries(dashboardPage.navigationBar)) {
-      for (const eachItem of MenuItems) {
+  testFixture("navigation bar loaded", async ({ dashboard, page }) => {
+    for (const [navBar, navItems] of Object.entries(dashboard.navigationBar)) {
+      for (const eachItem of navItems) {
         await expect(page.locator(navBar, { hasText: eachItem })).toBeVisible();
       }
     }
