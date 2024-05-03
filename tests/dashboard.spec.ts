@@ -6,7 +6,7 @@ testFixture.describe("Dashboard Page", () => {
     await dashboard.expectSpinnerLoaded();
   });
 
-  testFixture.skip('navigation bar loaded', async ({ dashboard, page }) => {
+  testFixture('navigation bar loaded', async ({ dashboard, page }) => {
     for (const [navBar, navItems] of Object.entries(dashboard.navigationBar)) {
       for (const eachItem of navItems) {
         await expect(page.locator(navBar, { hasText: eachItem })).toBeVisible();
