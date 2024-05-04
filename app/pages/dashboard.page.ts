@@ -1,27 +1,18 @@
 import { expect } from "@playwright/test";
+import { Page } from "@playwright/test";
 import { BasePage } from "../abstractClasses";
 
 export class DashboardPage extends BasePage {
-  public readonly pagePath = '/';
+  public readonly pagePath = "/dashboard";
 
-  private homeBanner = this.page.locator(".homepage");
-  private homeLoadingSpinner = this.page.locator(".loading_home");
-  public readonly navigationBar: { [key: string]: string[] } = {
-    ".navbar-nav": this.navigationItems(),
-  };
+  public walletCard = this.page.locator(".card");
+  public myBookings = this.page.getByRole("link", { name: "My Bookings" });
 
-  navigationItems(): string[] {
-    return ["Flights", "Hotels", "Tours", "Cars", "Blogs"];
+  constructor(page: Page) {
+    super(page);
   }
 
   async expectLoaded() {
-    await expect(this.homeBanner).toBeVisible();
-    await expect(this.homeLoadingSpinner).toBeVisible();
-  }
-
-  async expectSpinnerLoaded() {
-    await this.page.waitForLoadState("domcontentloaded");
-
-    await expect(this.homeLoadingSpinner).not.toBeVisible();
+    await expect(this.myBookings).toBeVisible();
   }
 }

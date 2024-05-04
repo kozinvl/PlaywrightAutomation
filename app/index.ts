@@ -3,7 +3,7 @@ import { AuthController } from "../api/api.controller";
 import { testConfig } from "../testConfig";
 
 export class Application extends AuthController {
-  
+
   async headlessLogin() {
     await this.login({
       email: testConfig.email,
