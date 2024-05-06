@@ -7,4 +7,3 @@ export const testConfig = {
     phptravels: "PHPSESSID",
   },
 };
-MesloLGS Nerd Font Mono
