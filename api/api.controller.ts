@@ -7,7 +7,15 @@ export class AuthController {
 
   public constructor(protected request: APIRequestContext) {}
 
-  async login(data: { email: string; password: string }) {
+  /**
+   * Logs in the user by sending a POST request to the login endpoint with the provided email and password.
+   *
+   * @param {Object} data - An object containing the email and password of the user.
+   * @param {string} data.email - The email of the user.
+   * @param {string} data.password - The password of the user.
+   * @return {Promise<APIResponse>} A Promise that resolves to the APIResponse of the login request.
+   */
+  async login(data: { email: string; password: string }): Promise<APIResponse> {
     await this.getSessionCookies();
 
     return await this.request.post("https://phptravels.net/login", {
@@ -34,11 +42,22 @@ export class AuthController {
     return this.sessionCookies;
   }
 
+  /**
+   * Retrieves the API response by sending a GET request to the specified base URL.
+   *
+   * @return {Promise<APIResponse>} The API response object.
+   */
   async getRequest(): Promise<APIResponse> {
     return await this.request.get(`${testConfig.baseURL}`);
   }
 
-  private getSetCookieHeader(request: APIResponse) {
+  /**
+   * Retrieves the set-cookie header from the API response.
+   *
+   * @param {APIResponse} request - The API response object.
+   * @return {string} The set-cookie header value.
+   */
+  private getSetCookieHeader(request: APIResponse): string {
     return (this.setCookie = request.headers()["set-cookie"]);
   }
 }
