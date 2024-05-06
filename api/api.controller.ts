@@ -32,9 +32,9 @@ export class AuthController {
   }
 
   async getSessionCookies() {
-    let cookies = this.getSetCookieHeader(await this.getRequest());
+    const cookies = this.getSetCookieHeader(await this.getRequest());
 
-    let cleanCookies = cookies.substring(0, cookies.indexOf(";"));
+    const cleanCookies = cookies.substring(0, cookies.indexOf(";"));
     this.sessionCookies = cleanCookies.split("=");
 
     return this.sessionCookies;
