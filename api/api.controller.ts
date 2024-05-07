@@ -1,9 +1,9 @@
-import { APIRequestContext, APIResponse } from "@playwright/test";
-import { testConfig } from "../testConfig";
+import { APIRequestContext, APIResponse } from '@playwright/test'
+import { testConfig } from '../testConfig'
 
 export class AuthController {
-  public sessionCookies: string[];
-  public setCookie: string;
+  public sessionCookies?: string[]
+  public setCookie?: string
 
   public constructor(protected request: APIRequestContext) {}
 
@@ -16,28 +16,28 @@ export class AuthController {
    * @return {Promise<APIResponse>} A Promise that resolves to the APIResponse of the login request.
    */
   async login(data: { email: string; password: string }): Promise<APIResponse> {
-    if (this.sessionCookies === undefined) { await this.getSessionCookies(); }
+    if (this.sessionCookies === undefined) { await this.getSessionCookies()}
 
-    return await this.request.post("https://phptravels.net/login", {
+    return await this.request.post('https://phptravels.net/login', {
       headers: {
-        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-        "X-request-With": "XMLHttpRequest",
-        Cookie: `${this.sessionCookies[0]}=${this.sessionCookies[1]}`,
+        'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'X-request-With': 'XMLHttpRequest',
+        Cookie: `${this.sessionCookies?.[0]}=${this.sessionCookies?.[1]}`,
       },
       form: {
         password: data.password,
         email: data.email,
       },
-    });
+    })
   }
 
   async getSessionCookies() {
-    const cookies = this.getSetCookieHeader(await this.getRequest());
+    this.setCookie = this.getSetCookieHeader(await this.getRequest())
 
-    const cleanCookies = cookies.substring(0, cookies.indexOf(";"));
-    this.sessionCookies = cleanCookies.split("=");
+    const cleanCookies = this.setCookie.substring(0, this.setCookie.indexOf(';'))
+    this.sessionCookies = cleanCookies.split('=')
 
-    return this.sessionCookies;
+    return this.sessionCookies
   }
 
   /**
@@ -46,16 +46,18 @@ export class AuthController {
    * @return {Promise<APIResponse>} The API response object.
    */
   async getRequest(): Promise<APIResponse> {
-    return await this.request.get(`${testConfig.baseURL}`);
+    return await this.request.get(`${testConfig.baseURL}`)
   }
 
   /**
    * Retrieves the set-cookie header from the API response.
-   *
-   * @param {APIResponse} request - The API response object.
    * @return {string} The set-cookie header value.
    */
   private getSetCookieHeader(request: APIResponse): string {
-    return (this.setCookie = request.headers()["set-cookie"]);
+    const header = request.headers()['set-cookie']
+
+    if (header !== testConfig.Cookie.phptravels) { throw new Error('set-cookie header is not found') }
+
+    return header
   }
 }
