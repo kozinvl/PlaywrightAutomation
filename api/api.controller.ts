@@ -16,7 +16,9 @@ export class AuthController {
    * @return {Promise<APIResponse>} A Promise that resolves to the APIResponse of the login request.
    */
   async login(data: { email: string; password: string }): Promise<APIResponse> {
-    if (this.sessionCookies === undefined) { await this.getSessionCookies()}
+    if (this.sessionCookies === undefined) {
+      await this.getSessionCookies()
+    }
 
     return await this.request.post('https://phptravels.net/login', {
       headers: {
@@ -56,7 +58,9 @@ export class AuthController {
   private getSetCookieHeader(request: APIResponse): string {
     const header = request.headers()['set-cookie']
 
-    if (header !== testConfig.Cookie.phptravels) { throw new Error('set-cookie header is not found') }
+    if (!header.includes(testConfig.Cookie.phptravels)) {
+      throw new Error('set-cookie header is not found')
+    }
 
     return header
   }
