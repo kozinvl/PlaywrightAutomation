@@ -1,0 +1,1 @@
+Typescript + Playwright + [ESlint/Prettier] 

@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test'
-import { testFixture } from '../fixtures'
+import { testFixture } from '@fixtures'
 
 testFixture.describe('Main Page', () => {
   testFixture('search trip section loaded', async ({ main }) => {
