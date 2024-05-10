@@ -10,7 +10,7 @@ test.describe('Authentication Page', () => {
     await formAuthPage.open()
   })
 
-  test.only('there is login form', async () => {
+  test('there is login form', async () => {
     expect(await formAuthPage.isLoaded()).toBeTruthy()
   })
 
