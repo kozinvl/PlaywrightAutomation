@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { Application } from '../app'
 import { DashboardPage } from '@pages'
-var ssdsdsdsdssdsdws
+
 test.describe('Dashboard Page', () => {
   test.describe('HeadlessLogin', () => {
     test('can login', async ({ request, page }) => {
