@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 import { Application } from '../app'
-import { DashboardPage } from '@pages'
+import { DashboardPage   } from '@pages'
 
 test.describe('Dashboard Page', () => {
   test.describe('HeadlessLogin', () => {
