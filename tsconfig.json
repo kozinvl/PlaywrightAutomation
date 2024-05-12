@@ -9,9 +9,9 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./",
     "paths": {
-      "@fixtures": ["fixtures"],
+      "@fixtures": ["./fixtures"],
+      "@pages": ["./app/pages"]
     }
   }
 }
