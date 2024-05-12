@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { FormAuthenticationPage } from '../app/pages/login.page'
-import { DashboardPage } from '../app/pages/dashboard.page'
+import { FormAuthenticationPage, DashboardPage } from '@pages'
 
 test.describe('Authentication Page', () => {
   let formAuthPage: FormAuthenticationPage
