@@ -1,5 +1,7 @@
 import { defineConfig, devices } from '@playwright/test'
 import { testConfig } from './testConfig'
+import dotenv from 'dotenv'
+dotenv.config()
 
 export default defineConfig({
   timeout: 30 * 1000,
@@ -9,7 +11,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  reporter: [['list'], ['html']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     locale: 'en-US',
