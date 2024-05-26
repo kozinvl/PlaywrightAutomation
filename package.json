@@ -26,15 +26,13 @@
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.4.5",
-    "prettier": "3.2.5"
+    "prettier": "3.2.5",
+    "dotenv": "^16.4.5"
   },
   "lint-staged": {
     "*.{js,jsx,ts}": [
       "prettier --write",
       "eslint"
     ]
-  },
-  "dependencies": {
-    "dotenv": "^16.4.5"
   }
 }
