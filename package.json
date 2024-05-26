@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:run": "npx playwright test --workers=2",
-    "lint": "eslint . --ext .ts, .feature ",
+    "lint": "eslint . --ext .ts",
     "prepare": "husky"
   },
   "keywords": [],
