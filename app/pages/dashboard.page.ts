@@ -7,7 +7,10 @@ export class DashboardPage extends BasePage {
   public walletCard = this.page.locator('.card')
   public myBookings = this.page.getByRole('link', { name: 'My Bookings' })
 
-  async expectLoaded() {
+  /**
+   * Asserts that the 'My Bookings' element is visible.
+   */
+  async expectLoaded(): Promise<void> {
     await expect(this.myBookings).toBeVisible()
   }
 }
