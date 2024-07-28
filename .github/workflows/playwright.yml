@@ -31,6 +31,9 @@ jobs:
       with:
          github_token: ${{ secrets.GITHUB_TOKEN }}
          publish_dir: ./playwright-report
-    - name: Add Report Summary
+    - name: Full Test Report Summary Link
       if: always()
       run: echo "Report URL https://kozinvl.github.io/PlaywrightAutomation/" >> $GITHUB_STEP_SUMMARY
+    - name: Publish CTRF Test Summary Results
+      if: always()
+      run: npx github-actions-ctrf summary ./results.json

@@ -11,7 +11,10 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 0 : 0,
   workers: process.env.CI ? 4 : undefined,
-  reporter: [['list'], ['html']],
+  reporter: [
+    ['html'],
+    process.env.CI ? ['json', { outputFile: 'results.json' }] : ['list', { printSteps: true }],
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     locale: 'en-US',
