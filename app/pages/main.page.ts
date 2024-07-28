@@ -19,7 +19,7 @@ export class MainPage extends BasePage {
     await expect(this.homeLoadingSpinner).toBeVisible()
   }
 
-  async expectSpinnerLoaded(): Promise<void> {
+  async expectSpinnerToBeHidden(): Promise<void> {
     await this.page.waitForLoadState('domcontentloaded')
 
     await expect(this.homeLoadingSpinner).toBeHidden()

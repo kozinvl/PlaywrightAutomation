@@ -25,6 +25,7 @@
         ],
         // Playwright rules
 
+        "playwright/expect-expect": "off", // allow to use object expectations
         // Enforce a maximum nesting level for `describe` blocks to improve code readability
         "playwright/max-nested-describe": "error",
         // Avoid using `eval` in tests to enhance security and prevent potential vulnerabilities

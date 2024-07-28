@@ -9,9 +9,15 @@ export default defineConfig({
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  reporter: [['list'], ['html']],
+  retries: process.env.CI ? 0 : 0,
+  workers: process.env.CI ? 6 : undefined,
+  reporter: [
+    ['html'],
+    process.env.CI
+      ? ['playwright-ctrf-json-reporter', { outputFile: 'results.json', outputDir: '.' }]
+      : ['null'],
+    ['list'],
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     locale: 'en-US',
