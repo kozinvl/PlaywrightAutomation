@@ -10,3 +10,4 @@ node_modules/
 /.vscode
 session.json
 /reports
+results.json

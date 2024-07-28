@@ -35,5 +35,5 @@ jobs:
       if: always()
       run: echo "Report URL https://kozinvl.github.io/PlaywrightAutomation/" >> $GITHUB_STEP_SUMMARY
     - name: Publish CTRF Test Summary Results
-      if: always()
       run: npx github-actions-ctrf summary ./results.json
+      if: always()
