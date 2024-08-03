@@ -1,13 +1,16 @@
 node_modules/
 /test-results/
+/reports
 /tests-examples/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
 /.idea
+.vscode
 .vscode-test
 .ssh
 /.vscode
 session.json
 /reports
+.env
 results.json
