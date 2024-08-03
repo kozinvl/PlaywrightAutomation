@@ -2,9 +2,8 @@ import { expect } from '@playwright/test'
 import { test } from '@fixtures'
 
 test.describe('Main Page', () => {
-  // eslint-disable-next-line playwright/expect-expect
   test('search section is loaded', async ({ main }) => {
-    await main.expectSpinnerLoaded()
+    await main.expectSpinnerToBeHidden()
   })
 
   test('navigation bar loaded', async ({ main, page }) => {

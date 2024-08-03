@@ -13,3 +13,4 @@ node_modules/
 session.json
 /reports
 .env
+results.json

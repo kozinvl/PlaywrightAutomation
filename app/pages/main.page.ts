@@ -14,12 +14,12 @@ export class MainPage extends BasePage {
     return ['Flights', 'Hotels', 'Tours', 'Cars', 'Blogs']
   }
 
-  async expectLoaded() {
+  async expectLoaded(): Promise<void> {
     await expect(this.homeBanner).toBeVisible()
     await expect(this.homeLoadingSpinner).toBeVisible()
   }
 
-  async expectSpinnerLoaded() {
+  async expectSpinnerToBeHidden(): Promise<void> {
     await this.page.waitForLoadState('domcontentloaded')
 
     await expect(this.homeLoadingSpinner).toBeHidden()
