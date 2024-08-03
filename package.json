@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:run": "npx playwright test --workers=2",
+    "test:cucumber": "npx cucumber-js",
     "lint": "eslint . --ext .ts",
     "prepare": "husky"
   },
