@@ -10,6 +10,10 @@ export class MainPage extends BasePage {
     '.navbar-nav': this.navigationItems(),
   }
 
+  public readonly mobileBanner = this.page.locator('.mobile_apps')
+  public readonly playStoreBanner = this.mobileBanner.getByRole('link', { name: 'Playstore' })
+  public readonly appleStoreBanner = this.mobileBanner.getByRole('link', { name: 'App Store' })
+
   navigationItems(): string[] {
     return ['Flights', 'Hotels', 'Tours', 'Cars', 'Blogs']
   }
