@@ -8,6 +8,9 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
       "@fixtures": ["./fixtures"],

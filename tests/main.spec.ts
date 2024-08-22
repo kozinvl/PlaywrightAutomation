@@ -1,7 +1,7 @@
 import { expect } from '@playwright/test'
 import { test } from '@fixtures'
 
-test.describe('Main Page', () => {
+test.describe('Main Page', { tag: ['@main'] }, () => {
   test('search section is loaded', async ({ main }) => {
     await main.expectSpinnerToBeHidden()
   })
@@ -12,5 +12,11 @@ test.describe('Main Page', () => {
         await expect(page.locator(navBar, { hasText: eachItem })).toBeVisible()
       }
     }
+  })
+
+  test('can load mobile apps banner', { tag: ['@smoke'] }, async ({ main }) => {
+    await expect(main.mobileBanner).toBeVisible()
+    await expect(main.playStoreBanner).toBeVisible()
+    await expect(main.appleStoreBanner).toBeVisible()
   })
 })
