@@ -15,7 +15,7 @@ export class MainPage extends BasePage {
   public readonly appleStoreBanner = this.mobileBanner.getByRole('link', { name: 'App Store' })
 
   navigationItems(): string[] {
-    return ['Flights', 'Hotels', 'Tours', 'Cars', 'Blogs']
+    return ['Flights', 'Hotels', 'Tours', 'Cars']
   }
 
   async expectLoaded(): Promise<void> {
