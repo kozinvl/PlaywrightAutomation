@@ -9,7 +9,7 @@ test.describe('Main Page', { tag: ['@main'] }, () => {
   test('navigation bar loaded', async ({ main, page }) => {
     for (const [navBar, navItems] of Object.entries(main.navigationBar)) {
       for (const eachItem of navItems) {
-        await expect(page.locator(navBar, { hasText: eachItem })).toBeVisible()
+        await expect.soft(page.locator(navBar, { hasText: eachItem })).toBeVisible()
       }
     }
   })
