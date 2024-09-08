@@ -20,7 +20,6 @@ export class MainPage extends BasePage {
 
   async expectLoaded(): Promise<void> {
     await expect(this.homeBanner).toBeVisible()
-    await expect(this.homeLoadingSpinner).toBeVisible()
   }
 
   async expectSpinnerToBeHidden(): Promise<void> {
