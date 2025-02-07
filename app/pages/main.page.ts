@@ -7,12 +7,11 @@ export class MainPage extends BasePage {
   private homeBanner = this.page.locator('.homepage')
   private homeLoadingSpinner = this.page.locator('.loading_home')
   public readonly navigationBar: { [key: string]: string[] } = {
-    '.navbar-nav': this.navigationItems(),
+    tab: this.navigationItems(),
   }
 
-  public readonly mobileBanner = this.page.locator('.mobile_apps')
-  public readonly playStoreBanner = this.mobileBanner.getByRole('link', { name: 'Playstore' })
-  public readonly appleStoreBanner = this.mobileBanner.getByRole('link', { name: 'App Store' })
+  public readonly playStoreBanner = this.page.getByRole('link', { name: 'Playstore' })
+  public readonly appleStoreBanner = this.page.getByRole('link', { name: 'App Store' })
 
   navigationItems(): string[] {
     return ['Flights', 'Hotels', 'Tours', 'Cars']

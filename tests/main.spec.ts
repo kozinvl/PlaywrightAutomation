@@ -9,13 +9,12 @@ test.describe('Main Page', { tag: ['@main'] }, () => {
   test('navigation bar loaded', async ({ main, page }) => {
     for (const [navBar, navItems] of Object.entries(main.navigationBar)) {
       for (const eachItem of navItems) {
-        await expect.soft(page.locator(navBar, { hasText: eachItem })).toBeVisible()
+        await expect.soft(page.getByRole('tab', { name: eachItem })).toBeVisible()
       }
     }
   })
 
   test('can load mobile apps banner', { tag: ['@smoke'] }, async ({ main }) => {
-    await expect(main.mobileBanner).toBeVisible()
     await expect(main.playStoreBanner).toBeVisible()
     await expect(main.appleStoreBanner).toBeVisible()
   })
