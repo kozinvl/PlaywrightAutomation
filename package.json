@@ -23,7 +23,7 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "playwright-ctrf-json-reporter": "^0.0.18",
-    "prettier": "3.5.2"
+    "prettier": "3.5.3"
   },
   "lint-staged": {
     "*.{js,jsx,ts}": [
