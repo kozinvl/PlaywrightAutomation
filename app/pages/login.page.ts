@@ -6,8 +6,8 @@ export class FormAuthenticationPage extends BasePage {
   public readonly pagePath = '/login'
 
   private signInButton = this.page.getByRole('button', { name: 'Login' })
-  private emailInput = this.page.getByLabel('Email Address')
-  private passwordInput = this.page.getByPlaceholder('******')
+  private emailInput = this.page.locator('#email')
+  private passwordInput = this.page.getByRole('textbox', { name: 'Password' })
   public signUpButton = this.page.getByRole('link', { name: 'Signup' })
 
   async expectLoaded(): Promise<void> {
