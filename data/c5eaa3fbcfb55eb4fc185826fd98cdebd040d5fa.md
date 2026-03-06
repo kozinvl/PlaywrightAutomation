@@ -70,12 +70,12 @@
               - generic [ref=e74]:
                 - generic [ref=e75]: calendar_today
                 - text: Check-in
-              - textbox "Check-in Date" [ref=e76]: 08-03-2026
+              - textbox "Check-in Date" [ref=e76]: 09-03-2026
             - generic [ref=e77]:
               - generic [ref=e78]:
                 - generic [ref=e79]: calendar_today
                 - text: Check-out
-              - textbox "Check-out Date" [ref=e80]: 09-03-2026
+              - textbox "Check-out Date" [ref=e80]: 10-03-2026
           - generic [ref=e81]:
             - generic [ref=e82]:
               - generic [ref=e83]:
@@ -135,7 +135,7 @@
               - img [ref=e141]
               - generic [ref=e143]: "2.0"
         - link [ref=e144] [cursor=pointer]:
-          - /url: https://phptravels.net/stay/burj-al-arab/200/hotels/_/08-03-2026/09-03-2026/NULL/1/2-0
+          - /url: https://phptravels.net/stay/burj-al-arab/200/hotels/_/09-03-2026/10-03-2026/NULL/1/2-0
       - generic [ref=e145]:
         - generic [ref=e146]:
           - generic [ref=e148]:
@@ -157,7 +157,7 @@
               - img [ref=e164]
               - generic [ref=e166]: "5.0"
         - link [ref=e167] [cursor=pointer]:
-          - /url: https://phptravels.net/stay/atlantis-the-palm/201/hotels/_/08-03-2026/09-03-2026/NULL/1/2-0
+          - /url: https://phptravels.net/stay/atlantis-the-palm/201/hotels/_/09-03-2026/10-03-2026/NULL/1/2-0
       - generic [ref=e168]:
         - generic [ref=e169]:
           - generic [ref=e171]:
@@ -179,7 +179,7 @@
               - img [ref=e187]
               - generic [ref=e189]: "5.0"
         - link [ref=e190] [cursor=pointer]:
-          - /url: https://phptravels.net/stay/address-downtown-dubai/202/hotels/_/08-03-2026/09-03-2026/NULL/1/2-0
+          - /url: https://phptravels.net/stay/address-downtown-dubai/202/hotels/_/09-03-2026/10-03-2026/NULL/1/2-0
       - generic [ref=e191]:
         - generic [ref=e192]:
           - generic [ref=e194]:
@@ -201,7 +201,7 @@
               - img [ref=e210]
               - generic [ref=e212]: "5.0"
         - link [ref=e213] [cursor=pointer]:
-          - /url: https://phptravels.net/stay/jw-marriott-marquis-dubai/203/hotels/_/08-03-2026/09-03-2026/NULL/1/2-0
+          - /url: https://phptravels.net/stay/jw-marriott-marquis-dubai/203/hotels/_/09-03-2026/10-03-2026/NULL/1/2-0
       - generic [ref=e214]:
         - generic [ref=e215]:
           - generic [ref=e217]:
@@ -223,7 +223,7 @@
               - img [ref=e233]
               - generic [ref=e235]: "5.0"
         - link [ref=e236] [cursor=pointer]:
-          - /url: https://phptravels.net/stay/waldorf-astoria-dubai/204/hotels/_/08-03-2026/09-03-2026/NULL/1/2-0
+          - /url: https://phptravels.net/stay/waldorf-astoria-dubai/204/hotels/_/09-03-2026/10-03-2026/NULL/1/2-0
       - generic [ref=e237]:
         - generic [ref=e238]:
           - generic [ref=e240]:
@@ -245,7 +245,7 @@
               - img [ref=e256]
               - generic [ref=e258]: "5.0"
         - link [ref=e259] [cursor=pointer]:
-          - /url: https://phptravels.net/stay/armani-hotel-dubai/205/hotels/_/08-03-2026/09-03-2026/NULL/1/2-0
+          - /url: https://phptravels.net/stay/armani-hotel-dubai/205/hotels/_/09-03-2026/10-03-2026/NULL/1/2-0
       - generic [ref=e260]:
         - generic [ref=e261]:
           - generic [ref=e263]:
@@ -267,7 +267,7 @@
               - img [ref=e279]
               - generic [ref=e281]: "5.0"
         - link [ref=e282] [cursor=pointer]:
-          - /url: https://phptravels.net/stay/palazzo-versace-dubai/206/hotels/_/08-03-2026/09-03-2026/NULL/1/2-0
+          - /url: https://phptravels.net/stay/palazzo-versace-dubai/206/hotels/_/09-03-2026/10-03-2026/NULL/1/2-0
       - generic [ref=e283]:
         - generic [ref=e284]:
           - generic [ref=e286]:
@@ -289,7 +289,7 @@
               - img [ref=e302]
               - generic [ref=e304]: "5.0"
         - link [ref=e305] [cursor=pointer]:
-          - /url: https://phptravels.net/stay/oneonly-the-palm-dubai/207/hotels/_/08-03-2026/09-03-2026/NULL/1/2-0
+          - /url: https://phptravels.net/stay/oneonly-the-palm-dubai/207/hotels/_/09-03-2026/10-03-2026/NULL/1/2-0
   - generic [ref=e307]:
     - generic [ref=e308]:
       - heading "Featured Flights" [level=2] [ref=e309]
@@ -608,7 +608,7 @@
               - img [ref=e656]
               - generic [ref=e657]: "5.0"
         - link [ref=e658] [cursor=pointer]:
-          - /url: https://phptravels.net/tour/dubai-skip-the-line-ticket-to-dubai-miracle-garden/100/tours/08-03-2026/2/2-0
+          - /url: https://phptravels.net/tour/dubai-skip-the-line-ticket-to-dubai-miracle-garden/100/tours/09-03-2026/2/2-0
       - generic [ref=e659]:
         - generic [ref=e660]:
           - generic [ref=e662]:
@@ -632,7 +632,7 @@
               - img [ref=e680]
               - generic [ref=e681]: "5.0"
         - link [ref=e682] [cursor=pointer]:
-          - /url: https://phptravels.net/tour/private-dubai-airport-transfer-dxb-to-dubai-city/101/tours/08-03-2026/4/2-0
+          - /url: https://phptravels.net/tour/private-dubai-airport-transfer-dxb-to-dubai-city/101/tours/09-03-2026/4/2-0
       - generic [ref=e683]:
         - generic [ref=e684]:
           - generic [ref=e686]:
@@ -656,7 +656,7 @@
               - img [ref=e704]
               - generic [ref=e705]: "5.0"
         - link [ref=e706] [cursor=pointer]:
-          - /url: https://phptravels.net/tour/dubai-frame/102/tours/08-03-2026/2/2-0
+          - /url: https://phptravels.net/tour/dubai-frame/102/tours/09-03-2026/2/2-0
       - generic [ref=e707]:
         - generic [ref=e708]:
           - generic [ref=e710]:
@@ -680,7 +680,7 @@
               - img [ref=e728]
               - generic [ref=e729]: "5.0"
         - link [ref=e730] [cursor=pointer]:
-          - /url: https://phptravels.net/tour/ain-dubai-dubai-eye/103/tours/08-03-2026/3/2-0
+          - /url: https://phptravels.net/tour/ain-dubai-dubai-eye/103/tours/09-03-2026/3/2-0
       - generic [ref=e731]:
         - generic [ref=e732]:
           - generic [ref=e734]:
@@ -704,7 +704,7 @@
               - img [ref=e752]
               - generic [ref=e753]: "5.0"
         - link [ref=e754] [cursor=pointer]:
-          - /url: https://phptravels.net/tour/dubai-city-tour-experience-top-attractions-of-dubai/104/tours/08-03-2026/4/2-0
+          - /url: https://phptravels.net/tour/dubai-city-tour-experience-top-attractions-of-dubai/104/tours/09-03-2026/4/2-0
       - generic [ref=e755]:
         - generic [ref=e756]:
           - generic [ref=e758]:
@@ -728,7 +728,7 @@
               - img [ref=e776]
               - generic [ref=e777]: "5.0"
         - link [ref=e778] [cursor=pointer]:
-          - /url: https://phptravels.net/tour/ski-dubai/105/tours/08-03-2026/7/2-0
+          - /url: https://phptravels.net/tour/ski-dubai/105/tours/09-03-2026/7/2-0
       - generic [ref=e779]:
         - generic [ref=e780]:
           - generic [ref=e782]:
@@ -752,7 +752,7 @@
               - img [ref=e800]
               - generic [ref=e801]: "5.0"
         - link [ref=e802] [cursor=pointer]:
-          - /url: https://phptravels.net/tour/dubai-city-tour-explore-old-modern-dubai/106/tours/08-03-2026/6/2-0
+          - /url: https://phptravels.net/tour/dubai-city-tour-explore-old-modern-dubai/106/tours/09-03-2026/6/2-0
       - generic [ref=e803]:
         - generic [ref=e804]:
           - generic [ref=e806]:
@@ -776,7 +776,7 @@
               - img [ref=e824]
               - generic [ref=e825]: "5.0"
         - link [ref=e826] [cursor=pointer]:
-          - /url: https://phptravels.net/tour/dubai-private-transfer-cruise-port-to-dubai-hotel/107/tours/08-03-2026/3/2-0
+          - /url: https://phptravels.net/tour/dubai-private-transfer-cruise-port-to-dubai-hotel/107/tours/09-03-2026/3/2-0
   - generic [ref=e828]:
     - generic [ref=e829]:
       - heading "Featured Blogs" [level=2] [ref=e831]
