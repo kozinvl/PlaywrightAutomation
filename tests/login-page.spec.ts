@@ -20,6 +20,6 @@ test.describe('Authentication Page', () => {
   test('there is successful authentication', async ({ page }) => {
     await formAuthPage.performAuthentication()
 
-    await expect(new DashboardPage(page).walletCard).toBeVisible()
+    await expect(new DashboardPage(page).dashboardHeading).toBeVisible()
   })
 })

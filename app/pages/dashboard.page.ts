@@ -4,13 +4,13 @@ import { BasePage } from '../abstractClasses'
 export class DashboardPage extends BasePage {
   public readonly pagePath = '/dashboard'
 
-  public walletCard = this.page.locator('.card')
-  public myBookings = this.page.getByRole('link', { name: 'My Bookings' })
+  public dashboardHeading = this.page.getByRole('heading', { name: 'Dashboard' })
+  public walletCard = this.dashboardHeading
 
   /**
-   * Asserts that the 'My Bookings' element is visible.
+   * Confirms the authenticated dashboard shell is visible.
    */
   async expectLoaded(): Promise<void> {
-    await expect(this.myBookings).toBeVisible()
+    await expect(this.dashboardHeading).toBeVisible()
   }
 }

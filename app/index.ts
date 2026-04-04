@@ -22,10 +22,7 @@ export class Application extends AuthController {
    * @return {Promise<void>} A promise that resolves when the cookie is set.
    */
   async setCookieLogin(page: Page): Promise<void> {
-    await page.goto('/', { waitUntil: 'commit' })
-
-    await page.evaluate((cookie: string) => {
-      document.cookie = cookie
-    }, this.setCookie as string)
+    await page.context().addCookies(this.cookies)
+    await page.goto('/', { waitUntil: 'domcontentloaded' })
   }
 }

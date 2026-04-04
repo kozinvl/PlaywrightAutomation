@@ -2,8 +2,7 @@ import { APIRequestContext, APIResponse } from '@playwright/test'
 import { testConfig } from '../testConfig'
 
 export class AuthController {
-  public sessionCookies?: string[]
-  public setCookie?: string
+  public cookies: Awaited<ReturnType<APIRequestContext['storageState']>>['cookies'] = []
 
   public constructor(protected request: APIRequestContext) {}
 
@@ -16,52 +15,54 @@ export class AuthController {
    * @return {Promise<APIResponse>} A Promise that resolves to the APIResponse of the login request.
    */
   async login(data: { email: string; password: string }): Promise<APIResponse> {
-    if (this.sessionCookies === undefined) {
-      await this.getSessionCookies()
-    }
+    const csrfToken = await this.getCsrfToken()
 
-    return await this.request.post('https://phptravels.net/login', {
+    const response = await this.request.post('/login', {
       headers: {
-        'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        'X-request-With': 'XMLHttpRequest',
-        Cookie: `${this.sessionCookies?.[0]}=${this.sessionCookies?.[1]}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+        Origin: testConfig.baseURL,
+        Referer: `${testConfig.baseURL}/login`,
       },
       form: {
-        password: data.password,
+        csrf_token: csrfToken,
         email: data.email,
+        password: data.password,
       },
     })
-  }
 
-  async getSessionCookies() {
-    this.setCookie = this.getSetCookieHeader(await this.getRequest())
-
-    const cleanCookies = this.setCookie.substring(0, this.setCookie.indexOf(';'))
-    this.sessionCookies = cleanCookies.split('=')
-
-    return this.sessionCookies
-  }
-
-  /**
-   * Retrieves the API response by sending a GET request to the specified base URL.
-   *
-   * @return {Promise<APIResponse>} The API response object.
-   */
-  async getRequest(): Promise<APIResponse> {
-    return await this.request.get(`${testConfig.baseURL}`)
-  }
-
-  /**
-   * Retrieves the set-cookie header from the API response.
-   * @return {string} The set-cookie header value.
-   */
-  private getSetCookieHeader(request: APIResponse): string {
-    const header = request.headers()['set-cookie']
-
-    if (!header.includes(testConfig.Cookie.phptravels)) {
-      throw new Error('set-cookie header is not found')
+    if (!response.ok() || !response.url().includes('/dashboard')) {
+      throw new Error(`Headless login failed with status ${response.status()} at ${response.url()}`)
     }
 
-    return header
+    await this.syncCookies()
+
+    return response
+  }
+
+  /**
+   * Gets the CSRF token from the login page that the current site requires for authentication.
+   */
+  async getCsrfToken(): Promise<string> {
+    const response = await this.request.get('/login')
+    const html = await response.text()
+    const match = html.match(/name="csrf_token"\s+value="([^"]+)"/)
+
+    if (!match) {
+      throw new Error('csrf_token is not found on the login page')
+    }
+
+    return match[1]
+  }
+
+  /**
+   * Copies the authenticated API request cookies so they can be applied to the browser context.
+   */
+  private async syncCookies(): Promise<void> {
+    const storageState = await this.request.storageState()
+    this.cookies = storageState.cookies.filter(cookie => cookie.domain.includes('phptravels.net'))
+
+    if (this.cookies.length === 0) {
+      throw new Error('Authenticated cookies were not captured from the API request context')
+    }
   }
 }
