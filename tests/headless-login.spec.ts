@@ -12,7 +12,7 @@ test.describe('Dashboard Page', () => {
       const dashboard = new DashboardPage(page)
       await dashboard.open()
 
-      await expect(dashboard.walletCard).toBeVisible()
+      await expect(dashboard.dashboardHeading).toBeVisible()
     })
   })
 })

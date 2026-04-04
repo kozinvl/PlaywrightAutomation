@@ -15,7 +15,7 @@ test.describe('Main Page', { tag: ['@main'] }, () => {
   })
 
   test('can load mobile apps banner', { tag: ['@smoke'] }, async ({ main }) => {
-    await expect(main.playStoreBanner).toBeVisible()
+    await expect(main.googlePlayBanner).toBeVisible()
     await expect(main.appleStoreBanner).toBeVisible()
   })
 })

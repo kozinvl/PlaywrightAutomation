@@ -4,21 +4,21 @@ import { BasePage } from '../abstractClasses'
 export class MainPage extends BasePage {
   public readonly pagePath = '/'
 
-  private homeBanner = this.page.locator('.homepage')
+  private background = this.page.locator('.bg-background')
   private homeLoadingSpinner = this.page.locator('.loading_home')
   public readonly navigationBar: { [key: string]: string[] } = {
     tab: this.navigationItems(),
   }
 
-  public readonly playStoreBanner = this.page.getByRole('link', { name: 'Playstore' })
+  public readonly googlePlayBanner = this.page.getByRole('link', { name: 'Google Play' })
   public readonly appleStoreBanner = this.page.getByRole('link', { name: 'App Store' })
 
   navigationItems(): string[] {
-    return ['Flights', 'Hotels', 'Tours', 'Cars']
+    return ['Flights', 'Stays', 'Tours', 'Cars', 'Visa']
   }
 
   async expectLoaded(): Promise<void> {
-    await expect(this.homeBanner).toBeVisible()
+    await expect(this.background).toBeVisible()
   }
 
   async expectSpinnerToBeHidden(): Promise<void> {
