@@ -10,7 +10,22 @@ export class FormAuthenticationPage extends BasePage {
   private passwordInput = this.page.getByRole('textbox', { name: 'Password' })
   public signUpButton = this.page.getByRole('link', { name: 'Signup' })
 
+  /**
+   * Dismisses the demo warning modal if it appears on page load.
+   * Clicks the "I understand & continue" button to close the overlay.
+   *
+   * @return {Promise<void>} A Promise that resolves when the modal is dismissed or not present.
+   */
+  async dismissDemoWarningModal(): Promise<void> {
+    const continueButton = this.page.getByRole('button', { name: 'I understand & continue' })
+    if (await continueButton.isVisible({ timeout: 3000 })) {
+      await continueButton.click()
+    }
+  }
+
   async expectLoaded(): Promise<void> {
+    await this.dismissDemoWarningModal()
+
     await expect(this.signInButton).toBeVisible()
     await expect(this.emailInput).toBeVisible()
     await expect(this.passwordInput).toBeVisible()
