@@ -54,31 +54,29 @@ Call log:
 - heading "Travel the way you love!" [level=1]
 - paragraph: Let's help you plan your next journey the one that will leave a lifetime of memories.
 - tablist:
+  - tab "tour Tours"
   - tab "directions_bus bus"
   - tab "sim_card eSIM"
   - tab "directions_boat ferries"
   - tab "flight_takeoff Flights"
   - tab "hotel Stays"
-  - tab "explore Tours"
   - tab "mosque Umrah"
   - tab "card_membership Visa"
 - tabpanel:
-  - button "trending_flat One Way"
-  - button "sync_alt Round Trip"
-  - text: trip_origin Origin Select City expand_more
   - img
-  - text: Destination Select City expand_more
+  - text: Destination Search By City expand_more
   - img
-  - text: Departure Date
-  - textbox "Date": July 10, 2026
+  - text: Start Date
+  - textbox "Start Date": July 12, 2026
+  - text: schedule Duration Any Duration expand_more category Tour Type Any Type expand_more
   - img
-  - text: Passengers 1 Adult expand_more
-  - button "Search Bus":
+  - text: Travelers 1 Traveler expand_more
+  - button "Search Tours":
     - img
 - heading "Featured eSIMs" [level=2]
 - paragraph: Featured countries. Open each country to view all available packages.
 - button "Scroll featured eSIM left" [disabled]: chevron_left
-- button "Scroll featured eSIM right": chevron_right
+- button "Scroll featured eSIM right" [disabled]: chevron_right
 - link "Country AM AM Armenia eSIM Armenia":
   - /url: https://phptravels.net/esim/40/am/all/
   - text: Country AM
@@ -127,50 +125,80 @@ Call log:
   - img "DZ"
   - heading "Algeria eSIM" [level=3]
   - paragraph: Algeria
-- heading "Featured Flights" [level=2]
-- paragraph: These alluring destinations are picked just for you
-- link "DXB flight LHR Dubai airlines Emirates London calendar_today One Way from USD 650":
-  - /url: https://phptravels.net/flights/dxb/lhr/oneway/economy/10-03-2026/1/0/0
-  - text: DXB flight LHR
-  - paragraph: Dubai
-  - paragraph: airlines Emirates
-  - paragraph: London
-  - text: calendar_today One Way from USD 650
-- link "LHR flight JFK London airlines British Airways New York calendar_today One Way from USD 780":
-  - /url: https://phptravels.net/flights/lhr/jfk/oneway/economy/13-03-2026/1/0/0
-  - text: LHR flight JFK
-  - paragraph: London
-  - paragraph: airlines British Airways
-  - paragraph: New York
-  - text: calendar_today One Way from USD 780
-- link "DIA flight SIN Doha airlines Qatar Airways Singapore calendar_today One Way from USD 590":
-  - /url: https://phptravels.net/flights/dia/sin/oneway/economy/16-03-2026/1/0/0
-  - text: DIA flight SIN
-  - paragraph: Doha
-  - paragraph: airlines Qatar Airways
-  - paragraph: Singapore
-  - text: calendar_today One Way from USD 590
-- link "SIN flight SYD Singapore airlines Singapore Airlines Sydney calendar_today One Way from USD 520":
-  - /url: https://phptravels.net/flights/sin/syd/oneway/economy/19-03-2026/1/0/0
-  - text: SIN flight SYD
-  - paragraph: Singapore
-  - paragraph: airlines Singapore Airlines
-  - paragraph: Sydney
-  - text: calendar_today One Way from USD 520
-- link "IST flight CDG Istanbul airlines Turkish Airlines Paris calendar_today One Way from USD 280":
-  - /url: https://phptravels.net/flights/ist/cdg/oneway/economy/22-03-2026/1/0/0
-  - text: IST flight CDG
-  - paragraph: Istanbul
-  - paragraph: airlines Turkish Airlines
-  - paragraph: Paris
-  - text: calendar_today One Way from USD 280
-- link "DXB flight MLE Dubai airlines Emirates Male calendar_today One Way from USD 420":
-  - /url: https://phptravels.net/flights/dxb/mle/oneway/economy/25-03-2026/1/0/0
-  - text: DXB flight MLE
-  - paragraph: Dubai
-  - paragraph: airlines Emirates
-  - paragraph: Male
-  - text: calendar_today One Way from USD 420
+- heading "Popular Tours" [level=2]
+- text: verified We price match task_alt Tour Booking Guarantee workspace_premium Tour Quality Guarantee
+- button "Dubai"
+- button "New York"
+- button "Barcelona"
+- button "Tokyo"
+- button "Maldives"
+- button "Paris"
+- button "London"
+- button "Rome"
+- text: 10% OFF location_on Dubai
+- 'img "Dubai: Skip-The-Line Ticket to Dubai Miracle Garden"'
+- 'heading "Dubai: Skip-The-Line Ticket to Dubai Miracle Garden" [level=3]'
+- text: schedule 2 Days / 1 Night From USD 151.41 /Person
+- img
+- text: "5.0"
+- link:
+  - /url: https://phptravels.net/tour/dubai-skip-the-line-ticket-to-dubai-miracle-garden/100/tours/12-07-2026/2/2-0
+- text: 15% OFF location_on Dubai
+- img "Private Dubai Airport Transfer DXB to Dubai City"
+- heading "Private Dubai Airport Transfer DXB to Dubai City" [level=3]
+- text: schedule 4 Days / 3 Nights From USD 284.13 /Person
+- img
+- text: "5.0"
+- link:
+  - /url: https://phptravels.net/tour/private-dubai-airport-transfer-dxb-to-dubai-city/101/tours/12-07-2026/4/2-0
+- text: 23% OFF location_on Dubai
+- img "Dubai Frame"
+- heading "Dubai Frame" [level=3]
+- text: schedule 2 Days / 1 Night From USD 454.23 /Person
+- img
+- text: "5.0"
+- link:
+  - /url: https://phptravels.net/tour/dubai-frame/102/tours/12-07-2026/2/2-0
+- text: 24% OFF location_on Dubai
+- img "Ain Dubai Dubai Eye"
+- heading "Ain Dubai Dubai Eye" [level=3]
+- text: schedule 3 Days / 2 Nights From USD 302.40 /Person
+- img
+- text: "5.0"
+- link:
+  - /url: https://phptravels.net/tour/ain-dubai-dubai-eye/103/tours/12-07-2026/3/2-0
+- text: 13% OFF location_on Dubai
+- 'img "Dubai City Tour: Experience Top Attractions of Dubai"'
+- 'heading "Dubai City Tour: Experience Top Attractions of Dubai" [level=3]'
+- text: schedule 4 Days / 3 Nights From USD 630.63 /Person
+- img
+- text: "5.0"
+- link:
+  - /url: https://phptravels.net/tour/dubai-city-tour-experience-top-attractions-of-dubai/104/tours/12-07-2026/4/2-0
+- text: 22% OFF location_on Dubai
+- img "Ski Dubai"
+- heading "Ski Dubai" [level=3]
+- text: schedule 7 Days / 6 Nights From USD 767.55 /Person
+- img
+- text: "5.0"
+- link:
+  - /url: https://phptravels.net/tour/ski-dubai/105/tours/12-07-2026/7/2-0
+- text: 15% OFF location_on Dubai
+- 'img "Dubai City Tour : Explore Old & Modern Dubai"'
+- 'heading "Dubai City Tour : Explore Old & Modern Dubai" [level=3]'
+- text: schedule 6 Days / 5 Nights From USD 362.25 /Person
+- img
+- text: "5.0"
+- link:
+  - /url: https://phptravels.net/tour/dubai-city-tour-explore-old-modern-dubai/106/tours/12-07-2026/6/2-0
+- text: 8% OFF location_on Dubai
+- 'img "Dubai Private Transfer: Cruise Port to Dubai Hotel"'
+- 'heading "Dubai Private Transfer: Cruise Port to Dubai Hotel" [level=3]'
+- text: schedule 3 Days / 2 Nights From USD 270.27 /Person
+- img
+- text: "5.0"
+- link:
+  - /url: https://phptravels.net/tour/dubai-private-transfer-cruise-port-to-dubai-hotel/107/tours/12-07-2026/3/2-0
 - img "Mobile Apps"
 - heading "Travel on the go with our app" [level=1]
 - paragraph: Book from your phone anytime, anywhere.
