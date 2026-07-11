@@ -54,24 +54,27 @@ Call log:
 - heading "Travel the way you love!" [level=1]
 - paragraph: Let's help you plan your next journey the one that will leave a lifetime of memories.
 - tablist:
+  - tab "hotel Stays"
   - tab "tour Tours"
   - tab "directions_bus bus"
   - tab "sim_card eSIM"
   - tab "directions_boat ferries"
   - tab "flight_takeoff Flights"
-  - tab "hotel Stays"
   - tab "mosque Umrah"
   - tab "card_membership Visa"
 - tabpanel:
   - img
-  - text: Destination Search By City expand_more
+  - text: Destination or Hotel Name Search By City expand_more
   - img
-  - text: Start Date
-  - textbox "Start Date": July 13, 2026
-  - text: schedule Duration Any Duration expand_more category Tour Type Any Type expand_more
+  - text: Check-in
+  - textbox "Check-in Date": July 14, 2026
   - img
-  - text: Travelers 1 Traveler expand_more
-  - button "Search Tours":
+  - img
+  - text: Check-out
+  - textbox "Check-out Date": July 15, 2026
+  - img
+  - text: Guests & Rooms 2 Guests, 1 Room expand_more flag Nationality Select Nationality expand_more
+  - button "Search Hotels":
     - img
 - heading "Featured eSIMs" [level=2]
 - paragraph: Featured countries. Open each country to view all available packages.
@@ -125,80 +128,50 @@ Call log:
   - img "DZ"
   - heading "Algeria eSIM" [level=3]
   - paragraph: Algeria
-- heading "Popular Tours" [level=2]
-- text: verified We price match task_alt Tour Booking Guarantee workspace_premium Tour Quality Guarantee
+- heading "Featured Properties" [level=2]
+- text: verified We price match task_alt Hotel Booking Guarantee workspace_premium Hotel Stay Guarantee
 - button "Dubai"
 - button "New York"
 - button "Barcelona"
 - button "Tokyo"
 - button "Maldives"
-- button "Paris"
-- button "London"
-- button "Rome"
+- button "Gan Island"
+- text: 15% OFF location_on Dubai
+- img "Burj Al Arab"
+- heading "Burj Al Arab" [level=3]
+- paragraph: home Jumeirah Beach Road
+- text: From USD 1,500.00
+- img
+- text: "2.0"
+- link:
+  - /url: https://phptravels.net/stay/burj-al-arab/200/hotels/_/14-07-2026/15-07-2026/NULL/1/2-0
+- text: 15% OFF location_on Dubai
+- img "Atlantis The Palm"
+- heading "Atlantis The Palm" [level=3]
+- paragraph: home Palm Jumeirah
+- text: From USD 450.00
+- img
+- text: "5.0"
+- link:
+  - /url: https://phptravels.net/stay/atlantis-the-palm/201/hotels/_/14-07-2026/15-07-2026/NULL/1/2-0
 - text: 10% OFF location_on Dubai
-- 'img "Dubai: Skip-The-Line Ticket to Dubai Miracle Garden"'
-- 'heading "Dubai: Skip-The-Line Ticket to Dubai Miracle Garden" [level=3]'
-- text: schedule 2 Days / 1 Night From USD 151.41 /Person
+- img "Address Downtown Dubai"
+- heading "Address Downtown Dubai" [level=3]
+- paragraph: home Sheikh Mohammed Bin Rashed Boulevard, P.O Box 111969
+- text: From USD 420.00
 - img
 - text: "5.0"
 - link:
-  - /url: https://phptravels.net/tour/dubai-skip-the-line-ticket-to-dubai-miracle-garden/100/tours/13-07-2026/2/2-0
-- text: 15% OFF location_on Dubai
-- img "Private Dubai Airport Transfer DXB to Dubai City"
-- heading "Private Dubai Airport Transfer DXB to Dubai City" [level=3]
-- text: schedule 4 Days / 3 Nights From USD 284.13 /Person
+  - /url: https://phptravels.net/stay/address-downtown-dubai/202/hotels/_/14-07-2026/15-07-2026/NULL/1/2-0
+- text: 10% OFF location_on Dubai
+- img "JW Marriott Marquis Dubai"
+- heading "JW Marriott Marquis Dubai" [level=3]
+- paragraph: home Sheikh Zayed Road, Business Bay
+- text: From USD 350.00
 - img
 - text: "5.0"
 - link:
-  - /url: https://phptravels.net/tour/private-dubai-airport-transfer-dxb-to-dubai-city/101/tours/13-07-2026/4/2-0
-- text: 23% OFF location_on Dubai
-- img "Dubai Frame"
-- heading "Dubai Frame" [level=3]
-- text: schedule 2 Days / 1 Night From USD 454.23 /Person
-- img
-- text: "5.0"
-- link:
-  - /url: https://phptravels.net/tour/dubai-frame/102/tours/13-07-2026/2/2-0
-- text: 24% OFF location_on Dubai
-- img "Ain Dubai Dubai Eye"
-- heading "Ain Dubai Dubai Eye" [level=3]
-- text: schedule 3 Days / 2 Nights From USD 302.40 /Person
-- img
-- text: "5.0"
-- link:
-  - /url: https://phptravels.net/tour/ain-dubai-dubai-eye/103/tours/13-07-2026/3/2-0
-- text: 13% OFF location_on Dubai
-- 'img "Dubai City Tour: Experience Top Attractions of Dubai"'
-- 'heading "Dubai City Tour: Experience Top Attractions of Dubai" [level=3]'
-- text: schedule 4 Days / 3 Nights From USD 630.63 /Person
-- img
-- text: "5.0"
-- link:
-  - /url: https://phptravels.net/tour/dubai-city-tour-experience-top-attractions-of-dubai/104/tours/13-07-2026/4/2-0
-- text: 22% OFF location_on Dubai
-- img "Ski Dubai"
-- heading "Ski Dubai" [level=3]
-- text: schedule 7 Days / 6 Nights From USD 767.55 /Person
-- img
-- text: "5.0"
-- link:
-  - /url: https://phptravels.net/tour/ski-dubai/105/tours/13-07-2026/7/2-0
-- text: 15% OFF location_on Dubai
-- 'img "Dubai City Tour : Explore Old & Modern Dubai"'
-- 'heading "Dubai City Tour : Explore Old & Modern Dubai" [level=3]'
-- text: schedule 6 Days / 5 Nights From USD 362.25 /Person
-- img
-- text: "5.0"
-- link:
-  - /url: https://phptravels.net/tour/dubai-city-tour-explore-old-modern-dubai/106/tours/13-07-2026/6/2-0
-- text: 8% OFF location_on Dubai
-- 'img "Dubai Private Transfer: Cruise Port to Dubai Hotel"'
-- 'heading "Dubai Private Transfer: Cruise Port to Dubai Hotel" [level=3]'
-- text: schedule 3 Days / 2 Nights From USD 270.27 /Person
-- img
-- text: "5.0"
-- link:
-  - /url: https://phptravels.net/tour/dubai-private-transfer-cruise-port-to-dubai-hotel/107/tours/13-07-2026/3/2-0
+  - /url: https://phptravels.net/stay/jw-marriott-marquis-dubai/203/hotels/_/14-07-2026/15-07-2026/NULL/1/2-0
 - img "Mobile Apps"
 - heading "Travel on the go with our app" [level=1]
 - paragraph: Book from your phone anytime, anywhere.
@@ -213,7 +186,6 @@ Call log:
 - contentinfo:
   - link "PHPTARVELS":
     - /url: https://phptravels.net/
-    - img "PHPTARVELS"
   - paragraph: Your trusted travel partner for unforgettable journeys. Discover the world with our comprehensive booking services.
   - text: headset_mic
   - paragraph: 24/7 Support
@@ -309,10 +281,9 @@ Call log:
     - /url: https://linkedin.com/company/phptravels
     - img
   - paragraph: © 2026 PHPTARVELS. All rights reserved.
-  - paragraph:
-    - text: Powered by
-    - link "PHPTRAVELS":
-      - /url: https://phptravels.com
+  - text: Powered by
+  - link "PHPTRAVELS":
+    - /url: https://phptravels.com
   - link "Privacy Policy":
     - /url: https://phptravels.net/page/privacy-policy
   - text: •
