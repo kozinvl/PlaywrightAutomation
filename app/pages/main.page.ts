@@ -17,7 +17,17 @@ export class MainPage extends BasePage {
   public readonly appleStoreBanner = this.page.getByRole('link', { name: 'App Store' })
 
   navigationItems(): string[] {
-    return ['Stays', 'Flights', 'Tours', 'bus', 'eSIM', 'ferries', 'Umrah', 'Visa']
+    return [
+      'Cars',
+      'Flights',
+      'Stays',
+      'Tours',
+      'bus',
+      'eSIM',
+      'ferries',
+      'Visa',
+      'AI Trip Planner',
+    ]
   }
 
   async dismissDemoWarningModal(): Promise<void> {
