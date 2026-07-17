@@ -5,8 +5,8 @@ import { testConfig } from '../../testConfig'
 export class FormAuthenticationPage extends BasePage {
   public readonly pagePath = '/login'
 
-  private signInButton = this.page.getByRole('button', { name: 'Login' })
-  private emailInput = this.page.locator('#email')
+  private signInButton = this.page.getByRole('button', { name: 'Sign In' })
+  private emailInput = this.page.getByRole('textbox', { name: 'Email Address' })
   private passwordInput = this.page.getByRole('textbox', { name: 'Password' })
   public signUpButton = this.page.getByRole('link', { name: 'Signup' })
 
