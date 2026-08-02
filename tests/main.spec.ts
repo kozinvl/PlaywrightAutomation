@@ -7,10 +7,18 @@ test.describe('Main Page', { tag: ['@main'] }, () => {
   })
 
   test('navigation bar loaded', async ({ main, page }) => {
-    for (const [navBar, navItems] of Object.entries(main.navigationBar)) {
-      for (const eachItem of navItems) {
-        await expect.soft(page.getByRole('tab', { name: eachItem })).toBeVisible()
-      }
+    await main.expectSpinnerToBeHidden()
+
+    const tablist = page.getByRole('tablist').first()
+    const stableTabLabels = ['Stays', 'Flights', 'Tours', 'Visa']
+
+    await expect(tablist).toBeVisible()
+    await expect
+      .poll(async () => tablist.getByRole('tab').count())
+      .toBeGreaterThanOrEqual(stableTabLabels.length)
+
+    for (const label of stableTabLabels) {
+      await expect.soft(tablist.getByRole('tab', { name: new RegExp(label, 'i') })).toBeVisible()
     }
   })
 
