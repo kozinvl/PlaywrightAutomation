@@ -16,15 +16,17 @@ export class FormAuthenticationPage extends BasePage {
    *
    * @return {Promise<void>} A Promise that resolves when the modal is dismissed or not present.
    */
+  private modalDismissed = false
+
   async dismissDemoWarningModal(): Promise<void> {
+    if (this.modalDismissed) return
     try {
       const continueButton = this.page.getByRole('button', { name: 'I understand & continue' })
       if (await continueButton.isVisible({ timeout: 3000 })) {
         await continueButton.click()
       }
-    } catch {
-      // Modal may not appear; safe to ignore.
-    }
+    } catch {}
+    this.modalDismissed = true
   }
 
   async expectLoaded(): Promise<void> {
