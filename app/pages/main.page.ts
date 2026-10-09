@@ -13,8 +13,12 @@ export class MainPage extends BasePage {
     tab: this.navigationItems(),
   }
 
-  public readonly googlePlayBanner = this.page.getByRole('link', { name: 'Google Play' })
-  public readonly appleStoreBanner = this.page.getByRole('link', { name: 'App Store' })
+  public readonly googlePlayBanner = this.page
+    .getByRole('link', { name: 'Google Play' })
+    .and(this.page.locator('.ma-store'))
+  public readonly appleStoreBanner = this.page
+    .getByRole('link', { name: 'App Store' })
+    .and(this.page.locator('.ma-store'))
 
   navigationItems(): string[] {
     return [

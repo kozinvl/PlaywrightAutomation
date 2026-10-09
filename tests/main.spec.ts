@@ -10,7 +10,7 @@ test.describe('Main Page', { tag: ['@main'] }, () => {
     await main.expectSpinnerToBeHidden()
 
     const tablist = page.getByRole('tablist').first()
-    const stableTabLabels = ['Stays', 'Flights', 'Tours', 'Visa']
+    const stableTabLabels = ['Stays', 'Flights', 'Tours', 'Cars']
 
     await expect(tablist).toBeVisible()
     await expect
@@ -20,6 +20,7 @@ test.describe('Main Page', { tag: ['@main'] }, () => {
     for (const label of stableTabLabels) {
       await expect.soft(tablist.getByRole('tab', { name: new RegExp(label, 'i') })).toBeVisible()
     }
+    await expect(page.getByRole('link', { name: 'Travel Visas', exact: true })).toBeVisible()
   })
 
   test('can load mobile apps banner', { tag: ['@smoke'] }, async ({ main }) => {
